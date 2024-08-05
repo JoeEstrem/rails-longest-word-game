@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="box-container">
+    <% @letters.each do |letter| %>
+      <div class="letter-card"><%= letter %></div>
+    <%end%>
+  </div>
+
+  <div>
+    <h1 style="margin-top: 48px;">What is the longest word you can find?</h1>
+  </div>
+
+  <div>
+    <form action="/score" method="TODO" data-turbo="false">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="hidden" name="letters" value="<%= @letters.join %>">
+      <input type="text" name="word">
+      <input type="submit" value="Submit">
+    </form>
+    </div>
+</div>

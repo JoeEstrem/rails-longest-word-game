@@ -1,0 +1,13 @@
+<div class="container">
+
+    <div class="box-container">
+    <% @end_message.each do |letter| %>
+      <div class="letter-card"><%= letter %></div>
+    <%end%>
+  </div>
+
+  <div>
+    <h1><%= @client_message %> </h1>
+  </div>
+
+</div>
